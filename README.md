@@ -8,18 +8,18 @@ This project demonstrates the core mechanics of asynchronous JavaScript, specifi
 
 ## Core Concepts Demonstrated
 
-* **Asynchronous Network Requests:** Utilizing the `fetch` API to retrieve data from an external server without blocking the main execution thread.
-* **Promise Resolution & Chaining:** Unpacking the HTTP `Response` object and using the `.json()` method to parse the raw data stream into a functional JavaScript Object.
-* **Defensive Error Handling:** Manually checking `!response.ok` and API-specific meta statuses to catch and throw failed requests (e.g., 404s) that the `fetch` API otherwise considers successful network transactions.
-* **Data Extraction & DOM Manipulation:** Traversing deeply nested JSON objects (`response.data.images.original.url`) to extract specific image URLs and dynamically updating the DOM.
-* **Robust Form Handling:** Utilizing the `FormData` API and `Object.fromEntries()` for clean, scalable user input extraction, alongside `encodeURIComponent()` to sanitize search parameters.
+- **Asynchronous Network Requests:** Utilizing the `fetch` API to retrieve data from an external server without blocking the main execution thread.
+- **Promise Resolution & Chaining:** Unpacking the HTTP `Response` object and using the `.json()` method to parse the raw data stream into a functional JavaScript Object.
+- **Defensive Error Handling:** Manually checking `!response.ok` and API-specific meta statuses to catch and throw failed requests (e.g., 404s) that the `fetch` API otherwise considers successful network transactions.
+- **Data Extraction & DOM Manipulation:** Traversing deeply nested JSON objects (`response.data.images.original.url`) to extract specific image URLs and dynamically updating the DOM.
+- **Robust Form Handling:** Utilizing the `FormData` API and `Object.fromEntries()` for clean, scalable user input extraction, alongside `encodeURIComponent()` to sanitize search parameters.
 
 ## Technologies Used
 
-* Vanilla JavaScript (ES6+)
-* HTML5 / CSS3
-* Giphy Translate API
-* Webpack (CSS bundling)
+- Vanilla JavaScript (ES6+)
+- HTML5 / CSS3
+- Giphy Translate API
+- Webpack (CSS bundling)
 
 ## Setup and Execution
 
