@@ -1,30 +1,29 @@
-### Simple Webpack Setup
+# Giphy API Fetcher
 
-# Vanilla JS Webpack Template
+A vanilla JavaScript application that interacts with the Giphy API to fetch and display GIFs based on user search queries. Built as part of The Odin Project's Full Stack JavaScript curriculum (Working with APIs).
 
-A minimalist boilerplate for frontend JavaScript projects, pre-configured with modern bundling and strict linting.
+## Overview
 
-## Stack
+This project demonstrates the core mechanics of asynchronous JavaScript, specifically focusing on the `fetch` API, Promise chaining, and JSON serialization. It transitions away from simulated delays to handling real-world network requests and API responses.
 
-- **Bundler:** Webpack 5
-- **Linter:** ESLint (v9 Flat Config)
-- **Formatter:** Prettier
+## Core Concepts Demonstrated
 
-## Environment Constraints
+* **Asynchronous Network Requests:** Utilizing the `fetch` API to retrieve data from an external server without blocking the main execution thread.
+* **Promise Resolution & Chaining:** Unpacking the HTTP `Response` object and using the `.json()` method to parse the raw data stream into a functional JavaScript Object.
+* **Defensive Error Handling:** Manually checking `!response.ok` and API-specific meta statuses to catch and throw failed requests (e.g., 404s) that the `fetch` API otherwise considers successful network transactions.
+* **Data Extraction & DOM Manipulation:** Traversing deeply nested JSON objects (`response.data.images.original.url`) to extract specific image URLs and dynamically updating the DOM.
+* **Robust Form Handling:** Utilizing the `FormData` API and `Object.fromEntries()` for clean, scalable user input extraction, alongside `encodeURIComponent()` to sanitize search parameters.
 
-This template is explicitly configured for **Vanilla JavaScript** running in the **Browser**.
+## Technologies Used
 
-**Do NOT use this template for:**
+* Vanilla JavaScript (ES6+)
+* HTML5 / CSS3
+* Giphy Translate API
+* Webpack (CSS bundling)
 
-- **React:** ESLint is not configured with `eslint-plugin-react` or JSX parsing.
-- **Node.js Backends:** The linter assumes a browser environment (`window`, `document`) and will fail to recognize Node global variables.
-- **TypeScript:** The parsing engine is strictly set for standard ECMAScript.
+## Setup and Execution
 
-## Scripts
-
-- `npm run build` - Compiles the production bundle to `/dist`
-- `npm run start` - Starts the Webpack dev server
-- `npm run lint` - Runs ESLint in check mode (CI/CD standard)
-- `npm run format` - Runs Prettier in write mode
-
-\*_Notes :_ Automatic github pages build and deploy
+1. Clone the repository down to your local machine.
+2. Run `npm install` to install dependencies.
+3. Run `npm run start` (or your specific Webpack dev server command) to launch the application.
+4. Note: The Giphy API key is currently hardcoded for educational purposes per curriculum constraints.
